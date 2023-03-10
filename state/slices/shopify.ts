@@ -40,7 +40,6 @@ export const fetchPosters = createAsyncThunk<
     apiVersion: process.env.NEXT_PUBLIC_SHOPIFY_API_VERSION,
   });
   const products = await client.product.fetchAll();
-  console.log('roducts in fetchPosters: ', products);
   return products;
 });
 
@@ -92,6 +91,11 @@ const shopifySlice = createSlice({
 
 const { actions, reducer } = shopifySlice;
 
-export const { cleanPostersReducer, cleanErrorMessage } = actions;
+export const {
+  setCurrentPoster,
+  cleanCurrentPoster,
+  cleanPostersReducer,
+  cleanErrorMessage,
+} = actions;
 
 export default reducer;
