@@ -8,7 +8,7 @@ import SocialLinks from '../components/SocialLinks/SocialLinks';
 
 import './styles.css';
 
-function CustomApp({ Component, pageProps }: AppProps) {
+function MysterySkoolsApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <Head>
@@ -23,4 +23,4 @@ function CustomApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default CustomApp;
+export default MysterySkoolsApp;
