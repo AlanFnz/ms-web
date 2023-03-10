@@ -20,6 +20,7 @@ export function Index() {
 
   useEffect(() => {
     dispatch(fetchPosters());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
