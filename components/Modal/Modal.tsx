@@ -13,8 +13,8 @@ const Modal = (props: ModalType) => {
   const { isOpen, closeAction, children } = props;
   return isOpen ? (
     <>
-      <ModalOverlay>
-        <ModalBox>
+      <ModalOverlay onClick={closeAction}>
+        <ModalBox onClick={(e) => e.stopPropagation()}>
           <CloseButton isModal={true} closeAction={closeAction} />
           {children}
         </ModalBox>

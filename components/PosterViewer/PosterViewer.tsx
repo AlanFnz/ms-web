@@ -26,12 +26,18 @@ const PosterViewer = (props: PosterViewerTypes) => {
 
   const closeAction = () => {
     dispatch(cleanCurrentPoster());
-  }
+  };
 
   return (
     <Modal isOpen={isOpen} setIsOpen={setIsOpen} closeAction={closeAction}>
       <PosterContainer>
-        <PosterImage alt={title} src={images[0].src} width={100} height={100} />
+        <PosterImage
+          alt={title}
+          src={images[0].src}
+          width={100}
+          height={100}
+          unoptimized={true}
+        />
       </PosterContainer>
     </Modal>
   );
