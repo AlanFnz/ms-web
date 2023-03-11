@@ -2,12 +2,14 @@ import React from 'react';
 import { Wrapper, Circle, Line } from './styledComponents';
 
 interface CloseButton {
-  isModal: boolean,
+  isModal: boolean;
+  closeAction: () => void;
 }
 
 const CloseButton = (props: CloseButton) => {
+  const { isModal, closeAction } = props;
   return (
-    <Wrapper isModal={props.isModal}>
+    <Wrapper isModal={props.isModal} onClick={closeAction}>
       <Circle>
         <Line />
         <Line />

@@ -8,11 +8,12 @@ export const Wrapper = styled.div<WrapperTypes>`
   position: absolute;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   ${props => props.isModal && `
     z-index: 1000;
-    top: -10px;
-    right: -10px;
+    top: -20px;
+    right: -20px;
   `}
 `;
 
@@ -20,6 +21,9 @@ export const Circle = styled.div`
   width: 40px;
   height: 40px;
   border-radius: 20px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #000;
   background: hsl(100, 100%, 100%);
   transition: 0.2s ease-in-out;
 
@@ -35,7 +39,7 @@ export const Line = styled.div`
   width: 20px;
   height: 4px;
   border-radius: 2px;
-  background: hsl(30, 100%, 80%);
+  background: #000;
   transform-origin: center;
   transform: translate(-50%, -50%) rotate(45deg);
 

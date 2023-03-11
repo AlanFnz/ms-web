@@ -1,15 +1,17 @@
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import { RootState } from '@/state/store';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from '@/state/store';
 import Modal from '../Modal/Modal';
 import useModal from '@/hooks/useModal';
 
 import { PosterContainer, PosterImage } from './styledComponents';
+import { cleanCurrentPoster } from '@/state/slices/shopify';
 
 interface PosterViewerTypes {}
 
 const PosterViewer = (props: PosterViewerTypes) => {
   const { isOpen, setIsOpen } = useModal();
+  const dispatch = useDispatch<AppDispatch>();
   const currentPoster = useSelector(
     (state: RootState) => state.shopify.currentPoster
   );
@@ -22,8 +24,12 @@ const PosterViewer = (props: PosterViewerTypes) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPoster]);
 
+  const closeAction = () => {
+    dispatch(cleanCurrentPoster());
+  }
+
   return (
-    <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
+    <Modal isOpen={isOpen} setIsOpen={setIsOpen} closeAction={closeAction}>
       <PosterContainer>
         <PosterImage alt={title} src={images[0].src} width={100} height={100} />
       </PosterContainer>

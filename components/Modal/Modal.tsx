@@ -6,15 +6,17 @@ interface ModalType {
   children?: ReactNode;
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  closeAction: () => void;
 }
 
 const Modal = (props: ModalType) => {
-  return props.isOpen ? (
+  const { isOpen, closeAction, children } = props;
+  return isOpen ? (
     <>
       <ModalOverlay>
         <ModalBox>
-          <CloseButton isModal={true} />
-          {props.children}
+          <CloseButton isModal={true} closeAction={closeAction} />
+          {children}
         </ModalBox>
       </ModalOverlay>
     </>
