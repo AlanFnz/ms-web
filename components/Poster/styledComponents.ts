@@ -31,6 +31,7 @@ export const PosterContainer = styled.div`
     bottom: -1vw;
     opacity: 0;
     left: 1vw;
+    color: #fff;
     content: '${(props) => props.title}';
   }
 
