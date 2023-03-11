@@ -1,5 +1,6 @@
-import React, { ReactNode } from "react";
-import { ModalBox, ModalOverlay } from "./styledComponents";
+import React, { ReactNode } from 'react';
+import CloseButton from '../CloseButton/CloseButton';
+import { ModalBox, ModalOverlay } from './styledComponents';
 
 interface ModalType {
   children?: ReactNode;
@@ -11,7 +12,10 @@ const Modal = (props: ModalType) => {
   return props.isOpen ? (
     <>
       <ModalOverlay>
-        <ModalBox>{props.children}</ModalBox>
+        <ModalBox>
+          <CloseButton isModal={true} />
+          {props.children}
+        </ModalBox>
       </ModalOverlay>
     </>
   ) : null;

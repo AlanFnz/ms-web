@@ -1,20 +1,26 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-  position: relative;
-  width: 100vw;
-  min-height: 100vh;
-  background: hsl(20, 100%, 64%);
-  display: flex;
+interface WrapperTypes {
+  isModal: boolean,
+};
+
+export const Wrapper = styled.div<WrapperTypes>`
+  position: absolute;
   justify-content: center;
   align-items: center;
+
+  ${props => props.isModal && `
+    z-index: 1000;
+    top: -10px;
+    right: -10px;
+  `}
 `;
 
-export const Arrow = styled.div`
+export const Circle = styled.div`
   width: 40px;
   height: 40px;
   border-radius: 20px;
-  background: hsl(40, 100%, 30%);
+  background: hsl(100, 100%, 100%);
   transition: 0.2s ease-in-out;
 
   &:hover {

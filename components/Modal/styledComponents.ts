@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ModalOverlay = styled.div`
   z-index: 9999;
@@ -13,6 +13,7 @@ export const ModalOverlay = styled.div`
 `;
 
 export const ModalBox = styled.div`
+  position: relative;
   display: block;
   background: white;
   height: 80vh;

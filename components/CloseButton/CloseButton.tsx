@@ -1,15 +1,17 @@
 import React from 'react';
-import { Wrapper, Arrow, Line } from './styledComponents';
+import { Wrapper, Circle, Line } from './styledComponents';
 
-interface CloseButton {}
+interface CloseButton {
+  isModal: boolean,
+}
 
 const CloseButton = (props: CloseButton) => {
   return (
-    <Wrapper>
-      <Arrow>
+    <Wrapper isModal={props.isModal}>
+      <Circle>
         <Line />
         <Line />
-      </Arrow>
+      </Circle>
     </Wrapper>
   );
 };
