@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '@/state/store';
-import Modal from '../Modal/Modal';
+import { cleanCurrentPoster } from '@/state/slices/shopify';
 import useModal from '@/hooks/useModal';
 
+import Modal from '../Modal/Modal';
 import { PosterContainer, PosterImage } from './styledComponents';
-import { cleanCurrentPoster } from '@/state/slices/shopify';
+import Dropdown from '../Dropdown/Dropdown';
 
 interface PosterViewerTypes {}
 
@@ -39,6 +40,7 @@ const PosterViewer = (props: PosterViewerTypes) => {
           unoptimized={true}
         />
       </PosterContainer>
+      {currentPoster?.variants && <Dropdown options={currentPoster.variants}/>}
     </Modal>
   );
 };

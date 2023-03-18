@@ -18,7 +18,7 @@ export const ModalBox = styled.div`
   position: relative;
   display: block;
   background: rgba(255, 255, 255, 0.1);
-  height: 80vh;
+  height: 75vh;
   padding: 1rem;
   border-radius: 0.5rem;
 
