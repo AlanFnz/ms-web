@@ -34,15 +34,15 @@ export default class CustomDocument extends Document {
       <Html>
         <Head>
           {this.props.styles}
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossOrigin="true"
+            rel='preconnect'
+            href='https://fonts.gstatic.com'
+            crossOrigin='true'
           ></link>
           <link
-            href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&display=swap"
-            rel="stylesheet"
+            href='https://fonts.googleapis.com/css2?family=Inter:wght@100;200;800;900&family=Raleway:ital,wght@0,100;0,300;0,500;1,100;1,500&display=swap'
+            rel='stylesheet'
           />
         </Head>
         <body>

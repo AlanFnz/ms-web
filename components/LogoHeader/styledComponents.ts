@@ -11,9 +11,10 @@ export const LogoContainer = styled.div`
 
 export const LogoText = styled.a`
   color: #fff;
-  font-family: Raleway, sans-serif;
+  font-family: Raleway-thin, sans-serif;
+  font-style: italic;
+  font-weight: 100;
   font-size: 32px;
-  font-weight: normal;
   line-height: 1.1;
   display: inline;
 `;
