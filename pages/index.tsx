@@ -10,7 +10,6 @@ import { AppDispatch, RootState } from '../state/store';
 import Poster from '../components/Poster/Poster';
 
 const MainContainer = styled.div`
-  height: 90vh;
   width: 100%;
   padding: 30px 5vw;
 `;
