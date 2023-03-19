@@ -8,6 +8,7 @@ import { PosterContainer, PosterImage } from './styledComponents';
 import Modal from '../Modal/Modal';
 import Dropdown from '../Dropdown/Dropdown';
 import AddToCartButton from '../AddToCartButton/AddToCartButton';
+import PosterInfoButton from '../PosterInfoButton/PosterInfoButton';
 
 interface PosterViewerTypes {}
 
@@ -42,6 +43,7 @@ const PosterViewer = (props: PosterViewerTypes) => {
         />
       </PosterContainer>
       {currentPoster?.variants && <Dropdown options={currentPoster.variants}/>}
+      <PosterInfoButton />
       <AddToCartButton />
     </Modal>
   );
