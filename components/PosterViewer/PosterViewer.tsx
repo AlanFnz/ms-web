@@ -4,9 +4,10 @@ import { AppDispatch, RootState } from '@/state/store';
 import { cleanCurrentPoster } from '@/state/slices/shopify';
 import useModal from '@/hooks/useModal';
 
-import Modal from '../Modal/Modal';
 import { PosterContainer, PosterImage } from './styledComponents';
+import Modal from '../Modal/Modal';
 import Dropdown from '../Dropdown/Dropdown';
+import AddToCart from '../AddToCart/AddToCart';
 
 interface PosterViewerTypes {}
 
@@ -41,6 +42,7 @@ const PosterViewer = (props: PosterViewerTypes) => {
         />
       </PosterContainer>
       {currentPoster?.variants && <Dropdown options={currentPoster.variants}/>}
+      <AddToCart />
     </Modal>
   );
 };
