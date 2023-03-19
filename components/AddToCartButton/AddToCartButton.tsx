@@ -1,8 +1,8 @@
 import React from 'react';
 import { ButtonContainer } from './styledComponents';
 
-const Button = (props: any) => {
+const AddToCartButton = (props: any) => {
   return <ButtonContainer><p>Add to cart</p></ButtonContainer>;
 };
 
-export default Button;
+export default AddToCartButton;

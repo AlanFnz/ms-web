@@ -7,7 +7,7 @@ import useModal from '@/hooks/useModal';
 import { PosterContainer, PosterImage } from './styledComponents';
 import Modal from '../Modal/Modal';
 import Dropdown from '../Dropdown/Dropdown';
-import AddToCart from '../AddToCart/AddToCart';
+import AddToCartButton from '../AddToCartButton/AddToCartButton';
 
 interface PosterViewerTypes {}
 
@@ -42,7 +42,7 @@ const PosterViewer = (props: PosterViewerTypes) => {
         />
       </PosterContainer>
       {currentPoster?.variants && <Dropdown options={currentPoster.variants}/>}
-      <AddToCart />
+      <AddToCartButton />
     </Modal>
   );
 };
