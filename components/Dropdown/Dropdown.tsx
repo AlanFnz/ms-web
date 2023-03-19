@@ -31,7 +31,6 @@ const Dropdown = (props: any) => {
       isOpen={dropdownState.isOpen}
       onClick={() => setDropdownState({ isOpen: !dropdownState.isOpen })}
     >
-
         <OptionsContainer isOpen={dropdownState.isOpen}>
           {dropdownState.isOpen && props.options &&
             props.options.map((option: any) => {
@@ -45,7 +44,6 @@ const Dropdown = (props: any) => {
               );
             })}
         </OptionsContainer>
-
       <InputPlaceholder
         type='text'
         readOnly
